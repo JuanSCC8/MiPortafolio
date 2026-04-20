@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { HiDownload, HiMail } from "react-icons/hi";
+import { FaGithub } from "react-icons/fa";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 function fadeUp(delay: number) {
@@ -114,6 +115,22 @@ export default function Hero() {
                   Open to work
                 </span>
               </motion.div>
+
+              {/* GitHub button */}
+              <motion.a
+                href="https://github.com/JuanSCC8"
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.0, duration: 0.4 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-full p-3 shadow-lg transition-colors duration-200"
+                aria-label="GitHub profile"
+              >
+                <FaGithub size={24} />
+              </motion.a>
             </div>
           </motion.div>
 
