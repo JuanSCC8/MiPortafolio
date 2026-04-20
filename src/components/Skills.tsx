@@ -78,7 +78,6 @@ export default function Skills() {
     other: skills.other,
   };
 
-  const levelLabel = [skills.basic, skills.intermediate, skills.advanced];
 
   const handleTab = (cat: CategoryKey) => {
     const oldIdx = CATEGORIES.indexOf(active);
@@ -165,25 +164,12 @@ export default function Skills() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.06, duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
                   whileHover={{ scale: 1.04, y: -4 }}
-                  className={`bg-white border ${theme.cardBorder} ${theme.cardBg} rounded-2xl p-5 flex flex-col items-center gap-3 shadow-sm hover:shadow-md transition-shadow duration-200 cursor-default`}
+                  className={`bg-white border ${theme.cardBorder} ${theme.cardBg} rounded-2xl p-7 flex flex-col items-center gap-4 shadow-sm hover:shadow-md transition-shadow duration-200 cursor-default`}
                 >
-                  <Icon size={38} style={{ color: skill.iconColor }} />
-                  <span className="text-sm font-semibold text-slate-700 text-center leading-tight">
+                  <Icon size={48} style={{ color: skill.iconColor }} />
+                  <span className="text-base font-semibold text-slate-700 text-center leading-tight">
                     {name}
                   </span>
-                  <div className="flex flex-col items-center gap-1">
-                    <div className="flex gap-1.5">
-                      {([1, 2, 3] as Level[]).map((n) => (
-                        <span
-                          key={n}
-                          className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                            n <= skill.level ? theme.dot : "bg-slate-200"
-                          }`}
-                        />
-                      ))}
-                    </div>
-                    <span className="text-xs text-slate-400">{levelLabel[skill.level - 1]}</span>
-                  </div>
                 </motion.div>
               );
             })}

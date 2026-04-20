@@ -4,7 +4,7 @@ export const es: Dictionary = {
   nav: {
     home: "Inicio",
     about: "Sobre Mí",
-    skills: "Skills",
+    skills: "Habilidades",
     projects: "Proyectos",
     experience: "Experiencia",
     contact: "Contacto",
@@ -51,7 +51,7 @@ export const es: Dictionary = {
     fullstack: "Full Stack Developer",
   },
   skills: {
-    title: "Skills",
+    title: "Habilidades",
     subtitle: "Tecnologías con las que trabajo",
     frontend: "Frontend",
     backend: "Backend",
