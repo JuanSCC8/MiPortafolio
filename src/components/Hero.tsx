@@ -6,10 +6,13 @@ import { HiDownload, HiMail } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+const vp = { once: false, margin: "-40px" };
+
 function fadeUp(delay: number) {
   return {
     initial: { opacity: 0, y: 28 },
-    animate: { opacity: 1, y: 0 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: vp,
     transition: { duration: 0.6, delay, ease: [0.25, 0.1, 0.25, 1] as const },
   };
 }
@@ -86,7 +89,8 @@ export default function Hero() {
           {/* Photo side */}
           <motion.div
             initial={{ opacity: 0, scale: 0.92 }}
-            animate={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={vp}
             transition={{ duration: 0.7, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
             className="flex justify-center md:justify-end order-1 md:order-2"
           >
@@ -103,7 +107,8 @@ export default function Hero() {
               </div>
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={vp}
                 transition={{ delay: 0.9, duration: 0.4 }}
                 className="absolute bottom-16 -right-4 sm:-right-6 bg-white rounded-2xl px-4 py-2 shadow-xl flex items-center gap-2"
               >
@@ -116,7 +121,8 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={vp}
                 transition={{ delay: 1.0, duration: 0.4 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
@@ -133,7 +139,8 @@ export default function Hero() {
         {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
+          viewport={vp}
           transition={{ delay: 1.2, duration: 0.6 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
         >
