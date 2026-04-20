@@ -20,13 +20,15 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-600 via-blue-500 to-blue-400 overflow-hidden pt-16"
+      className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-600 via-blue-500 to-blue-400 pt-16"
     >
-      {/* Decorative blobs */}
-      <div className="absolute top-[-80px] right-[-80px] w-80 h-80 rounded-full bg-white/10 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-[-60px] left-[-60px] w-64 h-64 rounded-full bg-blue-800/30 blur-3xl pointer-events-none" />
+      {/* Blobs — overflow hidden only here so the wave can extend below */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-[-80px] right-[-80px] w-80 h-80 rounded-full bg-white/10 blur-3xl" />
+        <div className="absolute bottom-[-60px] left-[-60px] w-64 h-64 rounded-full bg-blue-800/30 blur-3xl" />
+      </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 py-20 w-full">
+      <div className="relative max-w-7xl mx-auto px-6 pt-10 pb-52 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
           {/* Text side */}
@@ -141,7 +143,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.6 }}
-          className="absolute bottom-24 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
+          className="absolute bottom-36 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
         >
           <span className="text-white/50 text-xs tracking-widest uppercase">scroll</span>
           <motion.div
@@ -152,26 +154,26 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Wave divider */}
-      <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none pointer-events-none">
+      {/* Wave divider — tall, visible from both sections */}
+      <div className="absolute bottom-0 left-0 right-0 pointer-events-none z-10">
         <svg
-          viewBox="0 0 1440 90"
+          viewBox="0 0 1440 160"
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-16 sm:h-20 lg:h-24"
+          className="w-full h-36 sm:h-48 lg:h-56"
         >
           <path
-            d="M0,45 C180,80 360,10 540,45 C720,80 900,10 1080,45 C1260,80 1380,30 1440,45 L1440,90 L0,90 Z"
+            d="M0,80 C240,160 480,0 720,80 C960,160 1200,0 1440,80 L1440,160 L0,160 Z"
             fill="white"
-            fillOpacity="0.25"
+            fillOpacity="0.18"
           />
           <path
-            d="M0,55 C240,20 480,75 720,55 C960,35 1200,70 1440,55 L1440,90 L0,90 Z"
+            d="M0,100 C360,30 720,160 1080,100 C1260,65 1380,125 1440,100 L1440,160 L0,160 Z"
             fill="white"
-            fillOpacity="0.5"
+            fillOpacity="0.45"
           />
           <path
-            d="M0,65 C320,35 640,85 960,65 C1120,55 1300,72 1440,65 L1440,90 L0,90 Z"
+            d="M0,125 C320,75 640,160 960,125 C1150,105 1320,140 1440,125 L1440,160 L0,160 Z"
             fill="white"
           />
         </svg>

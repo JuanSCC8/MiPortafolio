@@ -60,7 +60,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="bg-white py-24 px-6">
+    <section id="about" className="bg-white pt-40 pb-24 px-6">
       <div className="max-w-6xl mx-auto">
 
         {/* Section header */}
