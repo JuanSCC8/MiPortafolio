@@ -69,7 +69,7 @@ export const en: Dictionary = {
     },
     sports: {
       title: "Sports",
-      description: "I'm a very sporty person. I mainly stand out in football and futsal, but I also enjoy:",
+      description: "I really enjoy sports, standing out mainly in football and futsal, training 3 times a week at university and representing it in tournaments. I also enjoy playing:",
       items: ["Football", "Futsal", "Basketball", "Volleyball", "Chess"],
     },
     music: {

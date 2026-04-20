@@ -153,7 +153,7 @@ export default function About() {
                     <Icon className={style.iconColor} size={16} />
                     <span className="text-sm font-semibold text-slate-700">{data.title}</span>
                   </div>
-                  <p className="text-xs text-slate-500 leading-relaxed">{data.description}</p>
+                  <p className="text-sm text-slate-500 leading-relaxed">{data.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {data.items.map((item) => (
                       <span

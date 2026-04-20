@@ -34,7 +34,7 @@ export const es: Dictionary = {
     },
     sports: {
       title: "Deportes",
-      description: "Soy una persona muy deportiva. Destaco principalmente en fútbol 11 y fútbol sala, pero también practico:",
+      description: "Me gusta mucho realizar deportes, destacándome más que todo en fútbol 11 y fútbol sala, entrenando 3 veces a la semana en la universidad representándola en torneos. También disfruto jugar:",
       items: ["Fútbol 11", "Fútbol Sala", "Baloncesto", "Volleyball", "Ajedrez"],
     },
     music: {
