@@ -74,8 +74,8 @@ export const en: Dictionary = {
     },
     music: {
       title: "Music",
-      description: "My music taste is quite varied — I listen to:",
-      items: ["Salsa", "English Music", "Rap", "Reggaeton"],
+      description: "My music taste is very varied: from salsa, bachata, and English music to rap and many other genres all the way to reggaeton.",
+      items: ["Salsa", "Bachata", "English Music", "Rap", "Reggaeton"],
     },
     goalsTitle: "Where I'm Headed",
     goalsDescription:
