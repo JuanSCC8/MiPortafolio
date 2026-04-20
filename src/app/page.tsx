@@ -7,7 +7,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <section id="about" className="min-h-screen flex items-center justify-center">
+        <section id="about" className="min-h-screen flex items-center justify-center bg-white">
           <p className="text-slate-400 text-sm">About — coming soon</p>
         </section>
         <section id="skills" className="min-h-screen flex items-center justify-center">

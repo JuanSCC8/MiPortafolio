@@ -90,16 +90,16 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
             className="flex justify-center md:justify-end order-1 md:order-2"
           >
-            <div className="relative">
+            <div className="relative pb-20">
               {/* Outer glow ring */}
               <div className="absolute inset-0 rounded-full bg-white/20 scale-110 blur-sm" />
               {/* Photo frame */}
-              <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full border-4 border-white/40 overflow-hidden shadow-2xl">
+              <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full border-4 border-white/50 overflow-hidden shadow-2xl">
                 <Image
                   src="/mifoto.jpg"
                   alt="Juan Sebastian Castaño Camues"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                   priority
                 />
               </div>
@@ -108,7 +108,7 @@ export default function Hero() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.9, duration: 0.4 }}
-                className="absolute bottom-4 -right-4 sm:-right-6 bg-white rounded-2xl px-4 py-2 shadow-xl flex items-center gap-2"
+                className="absolute bottom-16 -right-4 sm:-right-6 bg-white rounded-2xl px-4 py-2 shadow-xl flex items-center gap-2"
               >
                 <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse" />
                 <span className="text-blue-900 text-xs font-semibold whitespace-nowrap">
@@ -126,10 +126,10 @@ export default function Hero() {
                 transition={{ delay: 1.0, duration: 0.4 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-full p-3 shadow-lg transition-colors duration-200"
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-white/20 hover:bg-white/35 backdrop-blur-sm text-white rounded-full p-3 shadow-lg transition-colors duration-200"
                 aria-label="GitHub profile"
               >
-                <FaGithub size={24} />
+                <FaGithub size={26} />
               </motion.a>
             </div>
           </motion.div>
@@ -141,7 +141,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.6 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
+          className="absolute bottom-24 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
         >
           <span className="text-white/50 text-xs tracking-widest uppercase">scroll</span>
           <motion.div
@@ -150,6 +150,31 @@ export default function Hero() {
             className="w-0.5 h-5 bg-white/30 rounded-full"
           />
         </motion.div>
+      </div>
+
+      {/* Wave divider */}
+      <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none pointer-events-none">
+        <svg
+          viewBox="0 0 1440 90"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-16 sm:h-20 lg:h-24"
+        >
+          <path
+            d="M0,45 C180,80 360,10 540,45 C720,80 900,10 1080,45 C1260,80 1380,30 1440,45 L1440,90 L0,90 Z"
+            fill="white"
+            fillOpacity="0.25"
+          />
+          <path
+            d="M0,55 C240,20 480,75 720,55 C960,35 1200,70 1440,55 L1440,90 L0,90 Z"
+            fill="white"
+            fillOpacity="0.5"
+          />
+          <path
+            d="M0,65 C320,35 640,85 960,65 C1120,55 1300,72 1440,65 L1440,90 L0,90 Z"
+            fill="white"
+          />
+        </svg>
       </div>
     </section>
   );
