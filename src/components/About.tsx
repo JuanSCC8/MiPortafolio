@@ -80,7 +80,7 @@ export default function About() {
   const { t } = useLanguage();
   const { about } = t;
 
-  const interests: { key: InterestKey; data: { title: string; items: string[] } }[] = [
+  const interests: { key: InterestKey; data: { title: string; description: string; items: string[] } }[] = [
     { key: "gaming", data: about.gaming },
     { key: "sports", data: about.sports },
     { key: "music", data: about.music },
@@ -153,6 +153,7 @@ export default function About() {
                     <Icon className={style.iconColor} size={16} />
                     <span className="text-sm font-semibold text-slate-700">{data.title}</span>
                   </div>
+                  <p className="text-xs text-slate-500 leading-relaxed">{data.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {data.items.map((item) => (
                       <span

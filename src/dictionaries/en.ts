@@ -23,9 +23,9 @@ export type Dictionary = {
     career: string;
     university: string;
     interestsTitle: string;
-    gaming: { title: string; items: string[] };
-    sports: { title: string; items: string[] };
-    music: { title: string; items: string[] };
+    gaming: { title: string; description: string; items: string[] };
+    sports: { title: string; description: string; items: string[] };
+    music: { title: string; description: string; items: string[] };
     goalsTitle: string;
     goalsDescription: string;
     frontend: string;
@@ -64,14 +64,17 @@ export const en: Dictionary = {
     interestsTitle: "Personal Interests",
     gaming: {
       title: "Video Games",
-      items: ["Fortnite", "Valorant", "Brawlhalla", "Clash Royale", "PES / FIFA"],
+      description: "In my free time I enjoy playing video games like:",
+      items: ["Fortnite", "Valorant", "Brawlhalla", "Clash Royale", "A classic PES and now FIFA"],
     },
     sports: {
       title: "Sports",
+      description: "I'm a very sporty person. I mainly stand out in football and futsal, but I also enjoy:",
       items: ["Football", "Futsal", "Basketball", "Volleyball", "Chess"],
     },
     music: {
       title: "Music",
+      description: "My music taste is quite varied — I listen to:",
       items: ["Salsa", "English Music", "Rap", "Reggaeton"],
     },
     goalsTitle: "Where I'm Headed",

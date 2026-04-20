@@ -29,14 +29,17 @@ export const es: Dictionary = {
     interestsTitle: "Intereses Personales",
     gaming: {
       title: "Videojuegos",
-      items: ["Fortnite", "Valorant", "Brawlhalla", "Clash Royale", "PES / FIFA"],
+      description: "En mis tiempos libres me gusta jugar videojuegos como:",
+      items: ["Fortnite", "Valorant", "Brawlhalla", "Clash Royale", "Un clásico PES y ahora FIFA"],
     },
     sports: {
       title: "Deportes",
+      description: "Soy una persona muy deportiva. Destaco principalmente en fútbol 11 y fútbol sala, pero también practico:",
       items: ["Fútbol 11", "Fútbol Sala", "Baloncesto", "Volleyball", "Ajedrez"],
     },
     music: {
       title: "Música",
+      description: "Mis gustos musicales son bastante variados, escucho:",
       items: ["Salsa", "Música en inglés", "Rap", "Reggaetón"],
     },
     goalsTitle: "¿Hacia dónde voy?",
