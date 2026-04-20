@@ -18,4 +18,33 @@ export const es: Dictionary = {
     downloadCV: "Descargar CV",
     contactMe: "Contáctame",
   },
+  about: {
+    title: "Sobre Mí",
+    subtitle: "Conoce un poco más sobre quién soy",
+    description:
+      "Soy Juan Sebastian Castaño Camues, estudiante de Ingeniería de Software en la Universidad Cooperativa de Colombia, sede Pasto. Me apasiona construir soluciones tecnológicas que generen impacto real. Me gusta aprender constantemente, crecer como desarrollador y enfrentarme a nuevos retos.",
+    location: "Pasto, Colombia",
+    career: "Ingeniería de Software",
+    university: "Universidad Cooperativa de Colombia",
+    interestsTitle: "Intereses Personales",
+    gaming: {
+      title: "Videojuegos",
+      items: ["Fortnite", "Valorant", "Brawlhalla", "Clash Royale", "PES / FIFA"],
+    },
+    sports: {
+      title: "Deportes",
+      items: ["Fútbol 11", "Fútbol Sala", "Baloncesto", "Volleyball", "Ajedrez"],
+    },
+    music: {
+      title: "Música",
+      items: ["Salsa", "Música en inglés", "Rap", "Reggaetón"],
+    },
+    goalsTitle: "¿Hacia dónde voy?",
+    goalsDescription:
+      "Me apasiona tanto el desarrollo frontend como backend, y últimamente el mundo de las bases de datos me está llamando cada vez más la atención. Mi objetivo es convertirme en un desarrollador full stack capaz de crear sistemas completos, escalables y que realmente puedan ayudar a las personas.",
+    frontend: "Frontend",
+    backend: "Backend",
+    databases: "Bases de Datos",
+    fullstack: "Full Stack Developer",
+  },
 };
