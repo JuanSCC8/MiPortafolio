@@ -5,6 +5,7 @@ export type Dictionary = {
     skills: string;
     projects: string;
     experience: string;
+    testimonials: string;
     contact: string;
   };
   hero: {
@@ -53,6 +54,7 @@ export const en: Dictionary = {
     skills: "Skills",
     projects: "Projects",
     experience: "Experience",
+    testimonials: "Testimonials",
     contact: "Contact",
   },
   hero: {

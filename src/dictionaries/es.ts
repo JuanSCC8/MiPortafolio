@@ -7,6 +7,7 @@ export const es: Dictionary = {
     skills: "Habilidades",
     projects: "Proyectos",
     experience: "Experiencia",
+    testimonials: "Testimonios",
     contact: "Contacto",
   },
   hero: {

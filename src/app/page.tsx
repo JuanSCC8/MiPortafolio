@@ -40,6 +40,12 @@ export default function Home() {
         </SectionReveal>
 
         <SectionReveal>
+          <section id="testimonials" className="min-h-screen flex items-center justify-center">
+            <p className="text-slate-400 text-sm">Testimonials — coming soon</p>
+          </section>
+        </SectionReveal>
+
+        <SectionReveal>
           <section id="experience" className="min-h-screen flex items-center justify-center">
             <p className="text-slate-400 text-sm">Experience — coming soon</p>
           </section>

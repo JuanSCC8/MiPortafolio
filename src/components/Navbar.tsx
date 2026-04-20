@@ -11,6 +11,7 @@ const NAV_HREFS = [
   { key: "skills" as const, href: "#skills" },
   { key: "projects" as const, href: "#projects" },
   { key: "experience" as const, href: "#experience" },
+  { key: "testimonials" as const, href: "#testimonials" },
   { key: "contact" as const, href: "#contact" },
 ];
 
