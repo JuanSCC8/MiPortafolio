@@ -71,7 +71,7 @@ export default function Navbar() {
           </span>
           <span className="hidden sm:block text-blue-900 font-semibold text-sm tracking-wide leading-tight">
             Juan Sebastian<br />
-            <span className="font-normal text-xs text-slate-400">Castaño Camues</span>
+            Castaño Camues
           </span>
         </a>
 

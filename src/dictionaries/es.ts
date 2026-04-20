@@ -9,4 +9,13 @@ export const es: Dictionary = {
     experience: "Experiencia",
     contact: "Contacto",
   },
+  hero: {
+    greeting: "Hola, soy",
+    role: "Estudiante de Ingeniería de Software",
+    university: "Universidad Cooperativa de Colombia",
+    description:
+      "Apasionado por el desarrollo de software y la construcción de soluciones que generan impacto. Disponible para prácticas empresariales y proyectos freelance.",
+    downloadCV: "Descargar CV",
+    contactMe: "Contáctame",
+  },
 };
