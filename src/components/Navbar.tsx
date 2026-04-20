@@ -84,10 +84,12 @@ export default function Navbar() {
             const isActive = activeSection === href.slice(1);
             return (
               <li key={href}>
-                <a
+                <motion.a
                   href={href}
                   onClick={(e) => { e.preventDefault(); handleNavClick(href); }}
-                  className={`relative px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                  whileHover={{ y: -3 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                  className={`relative block px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                     isActive
                       ? "text-blue-900"
                       : "text-slate-600 hover:text-slate-900"
@@ -100,7 +102,7 @@ export default function Navbar() {
                       className="absolute bottom-0 left-3 right-3 h-0.5 bg-blue-900 rounded-full"
                     />
                   )}
-                </a>
+                </motion.a>
               </li>
             );
           })}

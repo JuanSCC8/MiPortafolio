@@ -53,26 +53,32 @@ export default function Hero() {
             </motion.p>
 
             <motion.div {...fadeUp(0.45)} className="flex flex-wrap gap-3 pt-2">
-              <a
+              <motion.a
                 href="/cv.pdf"
                 download="JuanSebastian-Castaño-CV.pdf"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-700 font-semibold text-sm rounded-full shadow-lg hover:shadow-xl hover:bg-blue-50 active:scale-95 transition-all duration-200"
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ type: "spring", stiffness: 350, damping: 20 }}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-700 font-semibold text-sm rounded-full shadow-lg hover:shadow-xl hover:bg-blue-50 transition-shadow duration-200"
               >
                 <HiDownload size={18} />
                 {t.hero.downloadCV}
-              </a>
+              </motion.a>
 
-              <a
+              <motion.a
                 href="#contact"
                 onClick={(e) => {
                   e.preventDefault();
                   document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-white font-semibold text-sm rounded-full border-2 border-white/60 hover:bg-white/10 active:scale-95 transition-all duration-200"
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ type: "spring", stiffness: 350, damping: 20 }}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-white font-semibold text-sm rounded-full border-2 border-white/60 hover:bg-white/10 transition-colors duration-200"
               >
                 <HiMail size={18} />
                 {t.hero.contactMe}
-              </a>
+              </motion.a>
             </motion.div>
           </div>
 
