@@ -29,18 +29,21 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries.find((e) => e.isIntersecting);
-        if (visible) setActiveSection(visible.target.id);
-      },
-      { threshold: 0.4, rootMargin: "-64px 0px 0px 0px" }
-    );
-    SECTIONS.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
+    const detectSection = () => {
+      const offset = 80;
+      let current = SECTIONS[0];
+      for (const id of SECTIONS) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= offset) {
+          current = id;
+        }
+      }
+      setActiveSection(current);
+    };
+
+    window.addEventListener("scroll", detectSection, { passive: true });
+    detectSection();
+    return () => window.removeEventListener("scroll", detectSection);
   }, []);
 
   const handleNavClick = (href: string) => {
@@ -69,7 +72,7 @@ export default function Navbar() {
           <span className="w-8 h-8 rounded-lg bg-blue-900 flex items-center justify-center text-white font-black text-xs select-none shrink-0">
             JS
           </span>
-          <span className="hidden sm:block text-blue-900 font-semibold text-sm tracking-wide leading-tight">
+          <span className="hidden sm:block text-blue-900 font-semibold text-base tracking-wide leading-tight">
             Juan Sebastian<br />
             Castaño Camues
           </span>
@@ -87,7 +90,7 @@ export default function Navbar() {
                   className={`relative px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                     isActive
                       ? "text-blue-900"
-                      : "text-slate-400 hover:text-slate-700"
+                      : "text-slate-600 hover:text-slate-900"
                   }`}
                 >
                   {t.nav[key]}
@@ -162,7 +165,7 @@ export default function Navbar() {
                       className={`block px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${
                         isActive
                           ? "text-blue-900 bg-blue-50"
-                          : "text-slate-400 hover:text-slate-700 hover:bg-slate-50"
+                          : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
                       }`}
                     >
                       {t.nav[key]}
