@@ -12,7 +12,7 @@ import { FaGamepad, FaFutbol, FaMusic, FaLayerGroup } from "react-icons/fa";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const ease = [0.25, 0.1, 0.25, 1] as const;
-const viewportOpts = { once: true, margin: "-60px" };
+const viewportOpts = { once: false, margin: "-60px" };
 
 function fromTop(delay = 0) {
   return {
