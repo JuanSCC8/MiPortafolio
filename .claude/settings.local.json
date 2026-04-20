@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(npx next *)",
+      "Read(//c/Users/JUANSE/.claude/projects/C--Users-JUANSE-Documents-MiPortafolio/memory//**)",
+      "Read(//c/Users/JUANSE/.claude/projects/C--Users-JUANSE-Documents-MiPortafolio/memory/**)"
+    ]
+  }
+}
