@@ -30,14 +30,22 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    const getAbsTop = (el: HTMLElement): number => {
+      let top = 0;
+      let cur: HTMLElement | null = el;
+      while (cur) {
+        top += cur.offsetTop;
+        cur = cur.offsetParent as HTMLElement | null;
+      }
+      return top;
+    };
+
     const detectSection = () => {
-      const offset = 80;
+      const scrollY = window.scrollY + 100;
       let current = SECTIONS[0];
       for (const id of SECTIONS) {
         const el = document.getElementById(id);
-        if (el && el.getBoundingClientRect().top <= offset) {
-          current = id;
-        }
+        if (el && getAbsTop(el) <= scrollY) current = id;
       }
       setActiveSection(current);
     };
