@@ -50,4 +50,15 @@ export const es: Dictionary = {
     databases: "Bases de Datos",
     fullstack: "Full Stack Developer",
   },
+  skills: {
+    title: "Skills",
+    subtitle: "Tecnologías con las que trabajo",
+    frontend: "Frontend",
+    backend: "Backend",
+    databases: "Bases de Datos",
+    other: "Otras Habilidades",
+    basic: "Básico",
+    intermediate: "Intermedio",
+    advanced: "Avanzado",
+  },
 };

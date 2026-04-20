@@ -33,6 +33,17 @@ export type Dictionary = {
     databases: string;
     fullstack: string;
   };
+  skills: {
+    title: string;
+    subtitle: string;
+    frontend: string;
+    backend: string;
+    databases: string;
+    other: string;
+    basic: string;
+    intermediate: string;
+    advanced: string;
+  };
 };
 
 export const en: Dictionary = {
@@ -84,5 +95,16 @@ export const en: Dictionary = {
     backend: "Backend",
     databases: "Databases",
     fullstack: "Full Stack Developer",
+  },
+  skills: {
+    title: "Skills",
+    subtitle: "Technologies I work with",
+    frontend: "Frontend",
+    backend: "Backend",
+    databases: "Databases",
+    other: "Other Skills",
+    basic: "Basic",
+    intermediate: "Intermediate",
+    advanced: "Advanced",
   },
 };

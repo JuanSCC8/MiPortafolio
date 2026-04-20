@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WaveDivider from "@/components/WaveDivider";
 import About from "@/components/About";
+import Skills from "@/components/Skills";
 
 function SectionReveal({ children }: { children: React.ReactNode }) {
   return (
@@ -29,9 +30,7 @@ export default function Home() {
         <About />
 
         <SectionReveal>
-          <section id="skills" className="min-h-screen flex items-center justify-center bg-white">
-            <p className="text-slate-400 text-sm">Skills — coming soon</p>
-          </section>
+          <Skills />
         </SectionReveal>
 
         <SectionReveal>
