@@ -20,15 +20,13 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-600 via-blue-500 to-blue-400 pt-16"
+      className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-600 via-blue-500 to-blue-400 overflow-hidden pt-16"
     >
-      {/* Blobs — overflow hidden only here so the wave can extend below */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-80px] right-[-80px] w-80 h-80 rounded-full bg-white/10 blur-3xl" />
-        <div className="absolute bottom-[-60px] left-[-60px] w-64 h-64 rounded-full bg-blue-800/30 blur-3xl" />
-      </div>
+      {/* Decorative blobs */}
+      <div className="absolute top-[-80px] right-[-80px] w-80 h-80 rounded-full bg-white/10 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-[-60px] left-[-60px] w-64 h-64 rounded-full bg-blue-800/30 blur-3xl pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-6 pt-10 pb-52 w-full">
+      <div className="relative max-w-7xl mx-auto px-6 py-20 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
           {/* Text side */}
@@ -93,9 +91,7 @@ export default function Hero() {
             className="flex justify-center md:justify-end order-1 md:order-2"
           >
             <div className="relative pb-20">
-              {/* Outer glow ring */}
               <div className="absolute inset-0 rounded-full bg-white/20 scale-110 blur-sm" />
-              {/* Photo frame */}
               <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full border-4 border-white/50 overflow-hidden shadow-2xl">
                 <Image
                   src="/mifoto.jpg"
@@ -105,7 +101,6 @@ export default function Hero() {
                   priority
                 />
               </div>
-              {/* Open to work badge */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -113,12 +108,9 @@ export default function Hero() {
                 className="absolute bottom-16 -right-4 sm:-right-6 bg-white rounded-2xl px-4 py-2 shadow-xl flex items-center gap-2"
               >
                 <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse" />
-                <span className="text-blue-900 text-xs font-semibold whitespace-nowrap">
-                  Open to work
-                </span>
+                <span className="text-blue-900 text-xs font-semibold whitespace-nowrap">Open to work</span>
               </motion.div>
 
-              {/* GitHub button */}
               <motion.a
                 href="https://github.com/JuanSCC8"
                 target="_blank"
@@ -143,7 +135,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.6 }}
-          className="absolute bottom-36 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
         >
           <span className="text-white/50 text-xs tracking-widest uppercase">scroll</span>
           <motion.div
@@ -152,31 +144,6 @@ export default function Hero() {
             className="w-0.5 h-5 bg-white/30 rounded-full"
           />
         </motion.div>
-      </div>
-
-      {/* Wave divider — tall, visible from both sections */}
-      <div className="absolute bottom-0 left-0 right-0 pointer-events-none z-10">
-        <svg
-          viewBox="0 0 1440 160"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-36 sm:h-48 lg:h-56"
-        >
-          <path
-            d="M0,80 C240,160 480,0 720,80 C960,160 1200,0 1440,80 L1440,160 L0,160 Z"
-            fill="white"
-            fillOpacity="0.18"
-          />
-          <path
-            d="M0,100 C360,30 720,160 1080,100 C1260,65 1380,125 1440,100 L1440,160 L0,160 Z"
-            fill="white"
-            fillOpacity="0.45"
-          />
-          <path
-            d="M0,125 C320,75 640,160 960,125 C1150,105 1320,140 1440,125 L1440,160 L0,160 Z"
-            fill="white"
-          />
-        </svg>
       </div>
     </section>
   );

@@ -11,12 +11,39 @@ import {
 import { FaGamepad, FaFutbol, FaMusic, FaLayerGroup } from "react-icons/fa";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-function fadeInUp(delay = 0) {
+const ease = [0.25, 0.1, 0.25, 1] as const;
+const viewportOpts = { once: true, margin: "-60px" };
+
+function fromTop(delay = 0) {
   return {
-    initial: { opacity: 0, y: 24 },
+    initial: { opacity: 0, y: -36 },
     whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true },
-    transition: { duration: 0.55, delay, ease: [0.25, 0.1, 0.25, 1] as const },
+    viewport: viewportOpts,
+    transition: { duration: 0.6, delay, ease },
+  };
+}
+function fromLeft(delay = 0) {
+  return {
+    initial: { opacity: 0, x: -60 },
+    whileInView: { opacity: 1, x: 0 },
+    viewport: viewportOpts,
+    transition: { duration: 0.6, delay, ease },
+  };
+}
+function fromRight(delay = 0) {
+  return {
+    initial: { opacity: 0, x: 60 },
+    whileInView: { opacity: 1, x: 0 },
+    viewport: viewportOpts,
+    transition: { duration: 0.6, delay, ease },
+  };
+}
+function fromBottom(delay = 0) {
+  return {
+    initial: { opacity: 0, y: 48 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: viewportOpts,
+    transition: { duration: 0.65, delay, ease },
   };
 }
 
@@ -60,11 +87,11 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="bg-white pt-40 pb-24 px-6">
+    <section id="about" className="bg-white pt-16 pb-24 px-6">
       <div className="max-w-6xl mx-auto">
 
-        {/* Section header */}
-        <motion.div {...fadeInUp(0)} className="text-center mb-16">
+        {/* Header — falls from top */}
+        <motion.div {...fromTop(0)} className="text-center mb-16">
           <p className="text-blue-500 text-sm font-semibold tracking-widest uppercase mb-2">
             {about.subtitle}
           </p>
@@ -72,12 +99,12 @@ export default function About() {
           <div className="mt-4 mx-auto w-16 h-1 rounded-full bg-blue-500" />
         </motion.div>
 
-        {/* Top grid: description + interests */}
+        {/* Main grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-10">
 
-          {/* Left: description card */}
+          {/* Left card — slides from left */}
           <motion.div
-            {...fadeInUp(0.1)}
+            {...fromLeft(0.1)}
             className="bg-slate-50 rounded-3xl p-8 border border-slate-100 flex flex-col gap-6"
           >
             <p className="text-slate-600 text-base leading-relaxed">
@@ -107,9 +134,9 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Right: interest cards */}
+          {/* Right column — slides from right */}
           <div className="flex flex-col gap-4">
-            <motion.p {...fadeInUp(0.15)} className="text-slate-500 text-sm font-semibold uppercase tracking-widest">
+            <motion.p {...fromRight(0.1)} className="text-slate-500 text-sm font-semibold uppercase tracking-widest">
               {about.interestsTitle}
             </motion.p>
 
@@ -119,7 +146,7 @@ export default function About() {
               return (
                 <motion.div
                   key={key}
-                  {...fadeInUp(0.2 + i * 0.08)}
+                  {...fromRight(0.18 + i * 0.1)}
                   className={`${style.bg} border ${style.border} rounded-2xl px-5 py-4 flex flex-col gap-3`}
                 >
                   <div className="flex items-center gap-2">
@@ -142,9 +169,9 @@ export default function About() {
           </div>
         </div>
 
-        {/* Goals card */}
+        {/* Goals card — rises from bottom */}
         <motion.div
-          {...fadeInUp(0.4)}
+          {...fromBottom(0.2)}
           className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-8 text-white"
         >
           <div className="flex items-center gap-3 mb-4">

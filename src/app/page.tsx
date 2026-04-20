@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import WaveDivider from "@/components/WaveDivider";
 import About from "@/components/About";
 
 function SectionReveal({ children }: { children: React.ReactNode }) {
@@ -24,13 +25,8 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-
-        {/* About slides under the wave with negative margin */}
-        <div className="-mt-20 sm:-mt-28 lg:-mt-32 relative z-0">
-          <SectionReveal>
-            <About />
-          </SectionReveal>
-        </div>
+        <WaveDivider />
+        <About />
 
         <SectionReveal>
           <section id="skills" className="min-h-screen flex items-center justify-center bg-white">
