@@ -55,22 +55,23 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0f172a]/90 backdrop-blur-md shadow-lg shadow-black/30 border-b border-white/5"
-          : "bg-transparent"
+          ? "bg-white/90 backdrop-blur-md shadow-sm shadow-slate-200/80 border-b border-slate-100"
+          : "bg-white"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
+        {/* Logo / Name */}
         <a
           href="#home"
           onClick={(e) => { e.preventDefault(); handleNavClick("#home"); }}
-          className="flex items-center gap-2 group"
+          className="flex items-center gap-2.5 group"
         >
-          <span className="w-8 h-8 rounded-lg bg-yellow-400 flex items-center justify-center text-slate-900 font-black text-sm select-none">
+          <span className="w-8 h-8 rounded-lg bg-blue-900 flex items-center justify-center text-white font-black text-xs select-none shrink-0">
             JS
           </span>
-          <span className="hidden sm:block text-white font-semibold text-sm tracking-wide group-hover:text-yellow-400 transition-colors">
-            Juan Sebastian
+          <span className="hidden sm:block text-blue-900 font-semibold text-sm tracking-wide leading-tight">
+            Juan Sebastian<br />
+            <span className="font-normal text-xs text-slate-400">Castaño Camues</span>
           </span>
         </a>
 
@@ -85,15 +86,15 @@ export default function Navbar() {
                   onClick={(e) => { e.preventDefault(); handleNavClick(href); }}
                   className={`relative px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                     isActive
-                      ? "text-yellow-400"
-                      : "text-slate-300 hover:text-white"
+                      ? "text-blue-900"
+                      : "text-slate-400 hover:text-slate-700"
                   }`}
                 >
                   {t.nav[key]}
                   {isActive && (
                     <motion.span
                       layoutId="nav-underline"
-                      className="absolute bottom-0 left-3 right-3 h-0.5 bg-yellow-400 rounded-full"
+                      className="absolute bottom-0 left-3 right-3 h-0.5 bg-blue-900 rounded-full"
                     />
                   )}
                 </a>
@@ -102,17 +103,17 @@ export default function Navbar() {
           })}
         </ul>
 
-        {/* Desktop right: language toggle */}
-        <div className="hidden md:flex items-center gap-3">
-          <div className="flex items-center rounded-full border border-white/20 overflow-hidden text-xs font-semibold">
+        {/* Desktop: language toggle */}
+        <div className="hidden md:flex items-center">
+          <div className="flex items-center rounded-full border border-slate-200 overflow-hidden text-xs font-semibold">
             {(["es", "en"] as Lang[]).map((l) => (
               <button
                 key={l}
                 onClick={() => setLang(l)}
                 className={`px-3 py-1.5 transition-all ${
                   lang === l
-                    ? "bg-yellow-400 text-slate-900"
-                    : "text-slate-400 hover:text-white"
+                    ? "bg-blue-900 text-white"
+                    : "text-slate-400 hover:text-slate-600 bg-white"
                 }`}
               >
                 {l.toUpperCase()}
@@ -125,13 +126,13 @@ export default function Navbar() {
         <div className="md:hidden flex items-center gap-3">
           <button
             onClick={toggleLang}
-            className="text-yellow-400 text-xs font-bold border border-yellow-400/40 rounded-full px-2.5 py-1"
+            className="text-blue-900 text-xs font-bold border border-blue-900/30 rounded-full px-2.5 py-1"
           >
             {lang === "es" ? "EN" : "ES"}
           </button>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-white p-1"
+            className="text-slate-600 p-1"
             aria-label="Toggle menu"
           >
             {menuOpen ? <HiX size={22} /> : <HiMenuAlt3 size={22} />}
@@ -139,7 +140,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile dropdown menu */}
+      {/* Mobile dropdown */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -148,9 +149,9 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden bg-[#0f172a]/95 backdrop-blur-md border-t border-white/10"
+            className="md:hidden bg-white border-t border-slate-100 shadow-md"
           >
-            <ul className="px-6 py-5 flex flex-col gap-1">
+            <ul className="px-6 py-4 flex flex-col gap-1">
               {NAV_HREFS.map(({ key, href }) => {
                 const isActive = activeSection === href.slice(1);
                 return (
@@ -160,8 +161,8 @@ export default function Navbar() {
                       onClick={(e) => { e.preventDefault(); handleNavClick(href); }}
                       className={`block px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${
                         isActive
-                          ? "text-yellow-400 bg-yellow-400/10"
-                          : "text-slate-300 hover:text-white hover:bg-white/5"
+                          ? "text-blue-900 bg-blue-50"
+                          : "text-slate-400 hover:text-slate-700 hover:bg-slate-50"
                       }`}
                     >
                       {t.nav[key]}
