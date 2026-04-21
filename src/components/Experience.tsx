@@ -95,11 +95,11 @@ export default function Experience() {
 
           {/* Vertical divider */}
           <div className="hidden md:flex flex-col items-center px-6">
-            <div className="w-px bg-slate-200 h-full" />
+            <div className="w-0.5 bg-slate-300 h-full rounded-full" />
           </div>
 
           {/* Work */}
-          <motion.div {...fadeUp(0.2)} className="flex flex-col gap-4 md:mt-24">
+          <motion.div {...fadeUp(0.2)} className="flex flex-col gap-4 md:mt-44">
             {/* Section label */}
             <div className="flex items-center gap-2 mb-1">
               <div className="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center shrink-0">
