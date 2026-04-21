@@ -57,6 +57,16 @@ export type Dictionary = {
     title: string;
     subtitle: string;
   };
+  experience: {
+    title: string;
+    subtitle: string;
+    academic: string;
+    work: string;
+    present: string;
+    seeking: string;
+    available: string;
+    openBadge: string;
+  };
 };
 
 export const en: Dictionary = {
@@ -132,5 +142,15 @@ export const en: Dictionary = {
   testimonials: {
     title: "Testimonials",
     subtitle: "What people say about me",
+  },
+  experience: {
+    title: "Experience",
+    subtitle: "My journey so far",
+    academic: "Academic",
+    work: "Work",
+    present: "Present",
+    seeking: "Seeking opportunities",
+    available: "Available for internships and freelance projects",
+    openBadge: "Open to Work",
   },
 };

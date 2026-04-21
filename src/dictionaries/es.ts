@@ -74,4 +74,14 @@ export const es: Dictionary = {
     title: "Testimonios",
     subtitle: "Lo que dicen de mí",
   },
+  experience: {
+    title: "Experiencia",
+    subtitle: "Mi trayectoria hasta aquí",
+    academic: "Académica",
+    work: "Laboral",
+    present: "Actualidad",
+    seeking: "En búsqueda de oportunidades",
+    available: "Disponible para prácticas y proyectos freelance",
+    openBadge: "Disponible",
+  },
 };
