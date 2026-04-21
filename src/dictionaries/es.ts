@@ -70,4 +70,8 @@ export const es: Dictionary = {
     comingSoon: "Próximamente",
     noDemo: "Sin demo disponible",
   },
+  testimonials: {
+    title: "Testimonios",
+    subtitle: "Lo que dicen de mí",
+  },
 };

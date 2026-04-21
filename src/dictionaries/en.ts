@@ -53,6 +53,10 @@ export type Dictionary = {
     comingSoon: string;
     noDemo: string;
   };
+  testimonials: {
+    title: string;
+    subtitle: string;
+  };
 };
 
 export const en: Dictionary = {
@@ -124,5 +128,9 @@ export const en: Dictionary = {
     viewDemo: "Live Demo",
     comingSoon: "Coming Soon",
     noDemo: "No demo available",
+  },
+  testimonials: {
+    title: "Testimonials",
+    subtitle: "What people say about me",
   },
 };

@@ -7,6 +7,7 @@ import WaveDivider from "@/components/WaveDivider";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import Testimonials from "@/components/Testimonials";
 
 function SectionReveal({ children }: { children: React.ReactNode }) {
   return (
@@ -39,9 +40,7 @@ export default function Home() {
         </SectionReveal>
 
         <SectionReveal>
-          <section id="testimonials" className="min-h-screen flex items-center justify-center">
-            <p className="text-slate-400 text-sm">Testimonials — coming soon</p>
-          </section>
+          <Testimonials />
         </SectionReveal>
 
         <SectionReveal>
