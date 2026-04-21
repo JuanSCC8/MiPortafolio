@@ -56,7 +56,7 @@ export default function Experience() {
               {/* Period */}
               <div className="flex items-center justify-between mb-4 mt-1">
                 <span className="text-xs font-semibold text-blue-600 bg-blue-50 border border-blue-100 rounded-full px-3 py-1">
-                  2022 — {experience.present}
+                  2024 — {experience.present}
                 </span>
                 <span className="text-xs font-bold text-white bg-blue-900 rounded-full px-3 py-1">
                   5° Semestre
