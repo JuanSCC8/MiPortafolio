@@ -54,7 +54,7 @@ const TESTIMONIALS: Testimonial[] = [
     name: "Maicol Estupiñan",
 
     textEs:
-      "Juan Sebastian es alguien que realmente se compromete con lo que hace. En los proyectos que trabajamos juntos siempre aportó ideas claras, escribió código ordenado y nunca le huyó a los problemas difíciles. Un crack del equipo.",
+      "Juan Sebastian es alguien que realmente se compromete con lo que hace. En los proyectos que trabajamos juntos siempre aportó ideas claras y nunca le huyó a los problemas difíciles.",
     textEn:
       "Juan Sebastian is someone who is truly committed to what he does. In the projects we worked on together he always brought clear ideas, wrote clean code and never shied away from hard problems. A real team asset.",
     stars: 5,
