@@ -74,6 +74,12 @@ export const es: Dictionary = {
     title: "Testimonios",
     subtitle: "Lo que dicen de mí",
   },
+  footer: {
+    message: "Construyendo soluciones que generan impacto.",
+    builtWith: "Hecho con",
+    madeIn: "Hecho en Colombia 🇨🇴",
+    copyright: "© 2026 Juan Sebastian Castaño Camues",
+  },
   contact: {
     title: "Contacto",
     subtitle: "Hablemos",

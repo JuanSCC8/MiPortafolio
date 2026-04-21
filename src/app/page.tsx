@@ -10,6 +10,7 @@ import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 function SectionReveal({ children }: { children: React.ReactNode }) {
   return (
@@ -53,6 +54,7 @@ export default function Home() {
           <Contact />
         </SectionReveal>
       </main>
+      <Footer />
     </>
   );
 }

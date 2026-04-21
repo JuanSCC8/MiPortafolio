@@ -67,6 +67,12 @@ export type Dictionary = {
     available: string;
     openBadge: string;
   };
+  footer: {
+    message: string;
+    builtWith: string;
+    madeIn: string;
+    copyright: string;
+  };
   contact: {
     title: string;
     subtitle: string;
@@ -156,6 +162,12 @@ export const en: Dictionary = {
   testimonials: {
     title: "Testimonials",
     subtitle: "What people say about me",
+  },
+  footer: {
+    message: "Building solutions that make a difference.",
+    builtWith: "Built with",
+    madeIn: "Made in Colombia 🇨🇴",
+    copyright: "© 2026 Juan Sebastian Castaño Camues",
   },
   contact: {
     title: "Contact",
