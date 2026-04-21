@@ -126,7 +126,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="h-0.5 bg-amber-400/60 mx-6" />
+      <div className="h-1 bg-amber-400/70 mx-6 rounded-full" />
       <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-blue-200">
         <span>{footer.copyright}</span>
         <span>{footer.madeIn}</span>
