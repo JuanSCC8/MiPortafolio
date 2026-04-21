@@ -6,7 +6,6 @@ import {
   SiNextdotjs,
   SiTypescript,
   SiTailwindcss,
-  SiFramer,
 } from "react-icons/si";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -25,7 +24,6 @@ const TECHS = [
   { name: "React",      icon: FaReact,        color: "#61dafb" },
   { name: "TypeScript", icon: SiTypescript,   color: "#3178c6" },
   { name: "Tailwind",   icon: SiTailwindcss,  color: "#38bdf8" },
-  { name: "Framer",     icon: SiFramer,       color: "#ffffff" },
 ];
 
 export default function Footer() {
