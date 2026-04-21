@@ -9,8 +9,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 interface Testimonial {
   name: string;
-  roleEs: string;
-  roleEn: string;
   textEs: string;
   textEn: string;
   stars: number;
@@ -21,8 +19,7 @@ interface Testimonial {
 const TESTIMONIALS: Testimonial[] = [
   {
     name: "Anyela Portillo",
-    roleEs: "Compañera de equipo",
-    roleEn: "Team Member",
+
     textEs:
       "Juan Sebastian es un compañero excepcional. Su dedicación y capacidad para resolver problemas complejos hacen que trabajar con él sea una experiencia muy enriquecedora. Siempre dispuesto a ayudar y con una actitud muy positiva ante los retos.",
     textEn:
@@ -33,8 +30,7 @@ const TESTIMONIALS: Testimonial[] = [
   },
   {
     name: "Gabriel Guerrero",
-    roleEs: "Compañero de universidad",
-    roleEn: "University Classmate",
+
     textEs:
       "Trabajar con Juan Sebastian en proyectos universitarios fue una gran experiencia. Tiene mucha iniciativa, se adapta rápido a las tecnologías nuevas y siempre entrega un trabajo limpio y bien organizado.",
     textEn:
@@ -45,8 +41,7 @@ const TESTIMONIALS: Testimonial[] = [
   },
   {
     name: "Juan Montezuma",
-    roleEs: "Compañero de proyecto",
-    roleEn: "Project Collaborator",
+
     textEs:
       "Juan Sebastian demostró ser un desarrollador muy comprometido. Su enfoque en las buenas prácticas y su facilidad para trabajar en equipo aportaron mucho al proyecto. Es alguien en quien se puede confiar.",
     textEn:
@@ -57,8 +52,7 @@ const TESTIMONIALS: Testimonial[] = [
   },
   {
     name: "Maicol Estupiñan",
-    roleEs: "Compañero de equipo",
-    roleEn: "Team Member",
+
     textEs:
       "Juan Sebastian es alguien que realmente se compromete con lo que hace. En los proyectos que trabajamos juntos siempre aportó ideas claras, escribió código ordenado y nunca le huyó a los problemas difíciles. Un crack del equipo.",
     textEn:
@@ -69,8 +63,7 @@ const TESTIMONIALS: Testimonial[] = [
   },
   {
     name: "Liliana Camues",
-    roleEs: "Familiar",
-    roleEn: "Family Member",
+
     textEs:
       "Desde pequeño siempre mostró curiosidad y ganas de aprender. Verlo crecer como profesional y ver todo lo que ha logrado construir me llena de orgullo. Es una persona muy dedicada, responsable y con un futuro muy brillante.",
     textEn:
@@ -100,7 +93,6 @@ function StarRating({ stars }: { stars: number }) {
 
 function TestimonialCard({ item, lang }: { item: Testimonial; lang: string }) {
   const text = lang === "es" ? item.textEs : item.textEn;
-  const role = lang === "es" ? item.roleEs : item.roleEn;
 
   return (
     <div className="relative flex flex-col bg-white border border-slate-100 rounded-2xl p-6 shadow-md h-full">
@@ -120,7 +112,6 @@ function TestimonialCard({ item, lang }: { item: Testimonial; lang: string }) {
         </div>
         <div>
           <p className="text-sm font-bold text-slate-700">{item.name}</p>
-          <p className="text-xs text-slate-400">{role}</p>
         </div>
       </div>
     </div>
