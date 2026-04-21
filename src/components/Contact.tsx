@@ -34,10 +34,14 @@ export default function Contact() {
 
     setStatus("sending");
     try {
-      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY);
+      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, {
+        publicKey: PUBLIC_KEY,
+      });
       setStatus("success");
       formRef.current.reset();
-    } catch {
+    } catch (err: unknown) {
+      const e = err as { status?: number; text?: string };
+      console.error("EmailJS error — status:", e?.status, "| text:", e?.text);
       setStatus("error");
     }
   };
