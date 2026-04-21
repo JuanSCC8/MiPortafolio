@@ -1,10 +1,32 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { HiAcademicCap, HiBriefcase, HiLocationMarker, HiCheckCircle } from "react-icons/hi";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const vp = { once: false, margin: "-60px" };
+
+function ProgressBar() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: false, margin: "-60px" });
+
+  return (
+    <div>
+      <div className="flex justify-between text-xs text-slate-400 mb-1.5">
+        <span>Progreso</span>
+        <span>~50%</span>
+      </div>
+      <div ref={ref} className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+        <motion.div
+          className="h-full bg-gradient-to-r from-blue-600 to-blue-400 rounded-full"
+          animate={{ width: inView ? "50%" : "0%" }}
+          transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+        />
+      </div>
+    </div>
+  );
+}
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 28 },
@@ -75,21 +97,7 @@ export default function Experience() {
               </div>
 
               {/* Progress bar */}
-              <div>
-                <div className="flex justify-between text-xs text-slate-400 mb-1.5">
-                  <span>Progreso</span>
-                  <span>~50%</span>
-                </div>
-                <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
-                  <motion.div
-                    className="h-full bg-gradient-to-r from-blue-600 to-blue-400 rounded-full"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "50%" }}
-                    viewport={vp}
-                    transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-                  />
-                </div>
-              </div>
+              <ProgressBar />
             </div>
           </motion.div>
 
