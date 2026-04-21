@@ -62,4 +62,12 @@ export const es: Dictionary = {
     intermediate: "Intermedio",
     advanced: "Avanzado",
   },
+  projects: {
+    title: "Proyectos",
+    subtitle: "Lo que he construido",
+    viewCode: "Ver Código",
+    viewDemo: "Ver Demo",
+    comingSoon: "Próximamente",
+    noDemo: "Sin demo disponible",
+  },
 };

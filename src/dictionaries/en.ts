@@ -45,6 +45,14 @@ export type Dictionary = {
     intermediate: string;
     advanced: string;
   };
+  projects: {
+    title: string;
+    subtitle: string;
+    viewCode: string;
+    viewDemo: string;
+    comingSoon: string;
+    noDemo: string;
+  };
 };
 
 export const en: Dictionary = {
@@ -108,5 +116,13 @@ export const en: Dictionary = {
     basic: "Basic",
     intermediate: "Intermediate",
     advanced: "Advanced",
+  },
+  projects: {
+    title: "Projects",
+    subtitle: "What I've built",
+    viewCode: "View Code",
+    viewDemo: "Live Demo",
+    comingSoon: "Coming Soon",
+    noDemo: "No demo available",
   },
 };
