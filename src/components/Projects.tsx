@@ -145,7 +145,7 @@ export default function Projects() {
                   <div className={`absolute -bottom-4 left-10 w-20 h-20 rounded-full ${project.decorColor}`} />
 
                   {/* Project number */}
-                  <span className="absolute top-4 left-5 text-white/40 font-black text-5xl leading-none select-none">
+                  <span className="absolute top-4 left-5 text-white/70 font-black text-5xl leading-none select-none drop-shadow-sm">
                     {String(i + 1).padStart(2, "0")}
                   </span>
 
