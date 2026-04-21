@@ -129,7 +129,7 @@ export default function Testimonials() {
 
   useEffect(() => {
     const update = () => {
-      const count = window.innerWidth < 768 ? 2 : 3;
+      const count = window.innerWidth < 768 ? 1 : 3;
       setVisibleCount(count);
       setStartIndex((i) => Math.min(i, TESTIMONIALS.length - count));
     };
