@@ -77,10 +77,10 @@ const PROJECTS: Project[] = [
     titleEs: "ControlEdificio",
     titleEn: "ControlEdificio",
     descriptionEs:
-      "Sistema de control y gestión para edificios. Permite administrar accesos, residentes y servicios del edificio desde una sola plataforma.",
+      "Sistema de control y gestión de edificios con la finalidad de permitir el acceso a empleados y visitantes, registrando su entrada y salida.",
     descriptionEn:
-      "Building control and management system. Allows managing access, residents, and building services from a single platform.",
-    techs: ["Java", "Spring Boot", "MySQL"],
+      "Building control and management system designed to allow access to employees and visitors, recording their entry and exit.",
+    techs: ["Java", "Spring Boot", "MongoDB"],
     repos: [
       {
         labelEs: "Repositorio",
@@ -88,7 +88,7 @@ const PROJECTS: Project[] = [
         url: "https://github.com/JuanSCC8/ControlEdificio",
       },
     ],
-    status: "coming-soon",
+    status: "live",
     gradient: "from-emerald-400 via-teal-400 to-cyan-500",
     decorColor: "bg-emerald-300/30",
     tagColor: "bg-emerald-100 text-emerald-700",
