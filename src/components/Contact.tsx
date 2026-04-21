@@ -120,6 +120,8 @@ export default function Contact() {
                   name="message"
                   required
                   rows={5}
+                  minLength={10}
+                  maxLength={150}
                   placeholder={contact.messagePlaceholder}
                   className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 placeholder-slate-400 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition resize-none"
                 />
