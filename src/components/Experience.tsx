@@ -95,7 +95,7 @@ export default function Experience() {
 
           {/* Vertical divider */}
           <div className="hidden md:flex flex-col items-center px-6">
-            <div className="w-0.5 h-full rounded-full bg-gradient-to-b from-blue-600 via-teal-400 to-emerald-500" />
+            <div className="w-1 h-full rounded-full bg-gradient-to-b from-blue-600 via-teal-400 to-emerald-500" />
           </div>
 
           {/* Work */}
