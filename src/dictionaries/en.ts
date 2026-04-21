@@ -67,6 +67,20 @@ export type Dictionary = {
     available: string;
     openBadge: string;
   };
+  contact: {
+    title: string;
+    subtitle: string;
+    name: string;
+    namePlaceholder: string;
+    email: string;
+    emailPlaceholder: string;
+    message: string;
+    messagePlaceholder: string;
+    send: string;
+    sending: string;
+    success: string;
+    error: string;
+  };
 };
 
 export const en: Dictionary = {
@@ -142,6 +156,20 @@ export const en: Dictionary = {
   testimonials: {
     title: "Testimonials",
     subtitle: "What people say about me",
+  },
+  contact: {
+    title: "Contact",
+    subtitle: "Let's talk",
+    name: "Name",
+    namePlaceholder: "Your name",
+    email: "Email",
+    emailPlaceholder: "your@email.com",
+    message: "Message",
+    messagePlaceholder: "Write your message here...",
+    send: "Send Message",
+    sending: "Sending...",
+    success: "Message sent! I'll get back to you soon.",
+    error: "Something went wrong. Please try again.",
   },
   experience: {
     title: "Experience",

@@ -9,6 +9,7 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
 import Experience from "@/components/Experience";
+import Contact from "@/components/Contact";
 
 function SectionReveal({ children }: { children: React.ReactNode }) {
   return (
@@ -49,9 +50,7 @@ export default function Home() {
         </SectionReveal>
 
         <SectionReveal>
-          <section id="contact" className="min-h-screen flex items-center justify-center">
-            <p className="text-slate-400 text-sm">Contact — coming soon</p>
-          </section>
+          <Contact />
         </SectionReveal>
       </main>
     </>
