@@ -34,7 +34,7 @@ export default function Experience() {
         </motion.div>
 
         {/* Two columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 md:gap-0">
 
           {/* Academic */}
           <motion.div {...fadeUp(0.1)} className="flex flex-col gap-4">
@@ -93,8 +93,13 @@ export default function Experience() {
             </div>
           </motion.div>
 
+          {/* Vertical divider */}
+          <div className="hidden md:flex flex-col items-center px-6">
+            <div className="w-px bg-slate-200 h-full" />
+          </div>
+
           {/* Work */}
-          <motion.div {...fadeUp(0.2)} className="flex flex-col gap-4">
+          <motion.div {...fadeUp(0.2)} className="flex flex-col gap-4 md:mt-24">
             {/* Section label */}
             <div className="flex items-center gap-2 mb-1">
               <div className="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center shrink-0">
