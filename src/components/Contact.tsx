@@ -104,6 +104,8 @@ export default function Contact() {
                   type="email"
                   name="from_email"
                   required
+                  minLength={5}
+                  maxLength={50}
                   placeholder={contact.emailPlaceholder}
                   className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 placeholder-slate-400 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition"
                 />
