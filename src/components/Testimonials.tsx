@@ -56,6 +56,18 @@ const TESTIMONIALS: Testimonial[] = [
     avatarBg: "bg-gradient-to-br from-emerald-400 to-teal-500",
   },
   {
+    name: "Maicol Estupiñan",
+    roleEs: "Compañero de equipo",
+    roleEn: "Team Member",
+    textEs:
+      "Juan Sebastian es alguien que realmente se compromete con lo que hace. En los proyectos que trabajamos juntos siempre aportó ideas claras, escribió código ordenado y nunca le huyó a los problemas difíciles. Un crack del equipo.",
+    textEn:
+      "Juan Sebastian is someone who is truly committed to what he does. In the projects we worked on together he always brought clear ideas, wrote clean code and never shied away from hard problems. A real team asset.",
+    stars: 5,
+    initials: "ME",
+    avatarBg: "bg-gradient-to-br from-orange-400 to-red-500",
+  },
+  {
     name: "Liliana Camues",
     roleEs: "Familiar",
     roleEn: "Family Member",
