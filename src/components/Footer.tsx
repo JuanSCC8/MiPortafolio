@@ -112,13 +112,15 @@ export default function Footer() {
             className="flex flex-col gap-2 md:items-end"
           >
             {NAV_LINKS.map(({ key, href }) => (
-              <button
+              <motion.button
                 key={href}
                 onClick={() => scrollTo(href)}
+                whileHover={{ y: -3 }}
+                transition={{ type: "spring", stiffness: 400, damping: 20 }}
                 className="text-sm text-blue-100 hover:text-white transition-colors text-left md:text-right"
               >
                 {nav[key]}
-              </button>
+              </motion.button>
             ))}
           </motion.div>
 
