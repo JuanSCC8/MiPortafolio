@@ -35,7 +35,7 @@ const TESTIMONIALS: Testimonial[] = [
       "Trabajar con Juan Sebastian en proyectos universitarios fue una gran experiencia. Tiene mucha iniciativa, se adapta rápido a las tecnologías nuevas y siempre entrega un trabajo limpio y bien organizado.",
     textEn:
       "Working with Juan Sebastian on university projects was a great experience. He takes a lot of initiative, adapts quickly to new technologies, and always delivers clean and well-organized work.",
-    stars: 4.5,
+    stars: 5,
     initials: "GG",
     avatarBg: "bg-gradient-to-br from-blue-400 to-indigo-500",
   },
@@ -46,7 +46,7 @@ const TESTIMONIALS: Testimonial[] = [
       "Juan Sebastian demostró ser un desarrollador muy comprometido. Su enfoque en las buenas prácticas y su facilidad para trabajar en equipo aportaron mucho al proyecto. Es alguien en quien se puede confiar.",
     textEn:
       "Juan Sebastian proved to be a very committed developer. His focus on best practices and his ease of working in a team contributed a lot to the project. He is someone you can rely on.",
-    stars: 4,
+    stars: 5,
     initials: "JM",
     avatarBg: "bg-gradient-to-br from-emerald-400 to-teal-500",
   },
