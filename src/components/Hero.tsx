@@ -110,10 +110,10 @@ export default function Hero() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={vp}
                 transition={{ delay: 0.9, duration: 0.4 }}
-                className="absolute bottom-16 -right-4 sm:-right-6 bg-white rounded-2xl px-4 py-2 shadow-xl flex items-center gap-2"
+                className="absolute bottom-16 -right-4 sm:-right-6 bg-white dark:bg-slate-800 rounded-2xl px-4 py-2 shadow-xl flex items-center gap-2"
               >
                 <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse" />
-                <span className="text-blue-900 text-xs font-semibold whitespace-nowrap">Open to work</span>
+                <span className="text-blue-900 dark:text-blue-300 text-xs font-semibold whitespace-nowrap">Open to work</span>
               </motion.div>
 
               <motion.a

@@ -50,27 +50,27 @@ function fromBottom(delay = 0) {
 const INTEREST_STYLES = {
   gaming: {
     icon: FaGamepad,
-    bg: "bg-violet-50",
-    border: "border-violet-200",
+    bg: "bg-violet-50 dark:bg-slate-800",
+    border: "border-violet-200 dark:border-violet-900/50",
     iconColor: "text-violet-500",
-    tagBg: "bg-violet-100",
-    tagText: "text-violet-700",
+    tagBg: "bg-violet-100 dark:bg-violet-900/30",
+    tagText: "text-violet-700 dark:text-violet-300",
   },
   sports: {
     icon: FaFutbol,
-    bg: "bg-emerald-50",
-    border: "border-emerald-200",
+    bg: "bg-emerald-50 dark:bg-slate-800",
+    border: "border-emerald-200 dark:border-emerald-900/50",
     iconColor: "text-emerald-500",
-    tagBg: "bg-emerald-100",
-    tagText: "text-emerald-700",
+    tagBg: "bg-emerald-100 dark:bg-emerald-900/30",
+    tagText: "text-emerald-700 dark:text-emerald-300",
   },
   music: {
     icon: FaMusic,
-    bg: "bg-orange-50",
-    border: "border-orange-200",
+    bg: "bg-orange-50 dark:bg-slate-800",
+    border: "border-orange-200 dark:border-orange-900/50",
     iconColor: "text-orange-500",
-    tagBg: "bg-orange-100",
-    tagText: "text-orange-700",
+    tagBg: "bg-orange-100 dark:bg-orange-900/30",
+    tagText: "text-orange-700 dark:text-orange-300",
   },
 } as const;
 
@@ -87,56 +87,56 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="bg-white pt-16 pb-24 px-6">
+    <section id="about" className="bg-white dark:bg-slate-900 pt-16 pb-24 px-6">
       <div className="max-w-6xl mx-auto">
 
-        {/* Header — falls from top */}
+        {/* Header */}
         <motion.div {...fromTop(0)} className="text-center mb-16">
           <p className="text-blue-500 text-sm font-semibold tracking-widest uppercase mb-2">
             {about.subtitle}
           </p>
-          <h2 className="text-4xl font-bold text-slate-800">{about.title}</h2>
+          <h2 className="text-4xl font-bold text-slate-800 dark:text-slate-100">{about.title}</h2>
           <div className="mt-4 mx-auto w-16 h-1 rounded-full bg-blue-500" />
         </motion.div>
 
         {/* Main grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-10">
 
-          {/* Left card — slides from left */}
+          {/* Left card */}
           <motion.div
             {...fromLeft(0.1)}
-            className="bg-slate-50 rounded-3xl p-8 border border-slate-100 flex flex-col gap-6"
+            className="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 border border-slate-100 dark:border-slate-700 flex flex-col gap-6"
           >
-            <p className="text-slate-600 text-base leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
               {about.description}
             </p>
 
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-3">
-                <span className="w-9 h-9 rounded-xl bg-blue-100 flex items-center justify-center shrink-0">
+                <span className="w-9 h-9 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center shrink-0">
                   <HiLocationMarker className="text-blue-600" size={18} />
                 </span>
                 <div>
-                  <p className="text-xs text-slate-400 leading-none mb-0.5">Ubicación</p>
-                  <p className="text-sm font-semibold text-slate-700">{about.location}</p>
+                  <p className="text-xs text-slate-400 dark:text-slate-500 leading-none mb-0.5">Ubicación</p>
+                  <p className="text-sm font-semibold text-slate-700 dark:text-slate-200">{about.location}</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
-                <span className="w-9 h-9 rounded-xl bg-blue-100 flex items-center justify-center shrink-0">
+                <span className="w-9 h-9 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center shrink-0">
                   <HiAcademicCap className="text-blue-600" size={18} />
                 </span>
                 <div>
-                  <p className="text-xs text-slate-400 leading-none mb-0.5">{about.career}</p>
-                  <p className="text-sm font-semibold text-slate-700">{about.university}</p>
+                  <p className="text-xs text-slate-400 dark:text-slate-500 leading-none mb-0.5">{about.career}</p>
+                  <p className="text-sm font-semibold text-slate-700 dark:text-slate-200">{about.university}</p>
                 </div>
               </div>
             </div>
           </motion.div>
 
-          {/* Right column — slides from right */}
+          {/* Right column */}
           <div className="flex flex-col gap-4">
-            <motion.p {...fromRight(0.1)} className="text-slate-500 text-sm font-semibold uppercase tracking-widest">
+            <motion.p {...fromRight(0.1)} className="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-widest">
               {about.interestsTitle}
             </motion.p>
 
@@ -151,9 +151,9 @@ export default function About() {
                 >
                   <div className="flex items-center gap-2">
                     <Icon className={style.iconColor} size={16} />
-                    <span className="text-sm font-semibold text-slate-700">{data.title}</span>
+                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-200">{data.title}</span>
                   </div>
-                  <p className="text-sm text-slate-500 leading-relaxed">{data.description}</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{data.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {data.items.map((item) => (
                       <span
@@ -170,7 +170,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Goals card — rises from bottom */}
+        {/* Goals card */}
         <motion.div
           {...fromBottom(0.2)}
           className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-8 text-white"

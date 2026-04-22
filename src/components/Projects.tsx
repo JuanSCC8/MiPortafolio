@@ -23,6 +23,7 @@ interface Project {
   gradient: string;
   decorColor: string;
   tagColor: string;
+  darkTagColor: string;
 }
 
 const PROJECTS: Project[] = [
@@ -46,6 +47,7 @@ const PROJECTS: Project[] = [
     gradient: "from-yellow-400 via-amber-400 to-orange-400",
     decorColor: "bg-yellow-300/30",
     tagColor: "bg-amber-100 text-amber-700",
+    darkTagColor: "dark:bg-amber-900/30 dark:text-amber-300",
   },
   {
     titleEs: "MindWell",
@@ -72,6 +74,7 @@ const PROJECTS: Project[] = [
     gradient: "from-violet-500 via-purple-500 to-indigo-500",
     decorColor: "bg-violet-300/30",
     tagColor: "bg-violet-100 text-violet-700",
+    darkTagColor: "dark:bg-violet-900/30 dark:text-violet-300",
   },
   {
     titleEs: "ControlEdificio",
@@ -92,6 +95,7 @@ const PROJECTS: Project[] = [
     gradient: "from-emerald-400 via-teal-400 to-cyan-500",
     decorColor: "bg-emerald-300/30",
     tagColor: "bg-emerald-100 text-emerald-700",
+    darkTagColor: "dark:bg-emerald-900/30 dark:text-emerald-300",
   },
 ];
 
@@ -102,7 +106,7 @@ export default function Projects() {
   const { projects } = t;
 
   return (
-    <section id="projects" className="bg-slate-50 py-24 px-6">
+    <section id="projects" className="bg-slate-50 dark:bg-slate-800 py-24 px-6">
       <div className="max-w-5xl mx-auto">
 
         {/* Header */}
@@ -116,7 +120,7 @@ export default function Projects() {
           <p className="text-blue-500 text-sm font-semibold tracking-widest uppercase mb-2">
             {projects.subtitle}
           </p>
-          <h2 className="text-4xl font-bold text-slate-800">{projects.title}</h2>
+          <h2 className="text-4xl font-bold text-slate-800 dark:text-slate-100">{projects.title}</h2>
           <div className="mt-4 mx-auto w-16 h-1 rounded-full bg-blue-500" />
         </motion.div>
 
@@ -135,26 +139,22 @@ export default function Projects() {
                 viewport={vp}
                 transition={{ duration: 0.5, delay: i * 0.12, ease: [0.25, 0.1, 0.25, 1] }}
                 whileHover={{ y: -8, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                className="flex flex-col rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 bg-white"
+                className="flex flex-col rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 bg-white dark:bg-slate-900"
               >
                 {/* Gradient header */}
                 <div className={`relative bg-gradient-to-br ${project.gradient} h-36 flex items-end p-5 overflow-hidden`}>
-                  {/* Decorative circles */}
                   <div className={`absolute -top-6 -right-6 w-28 h-28 rounded-full ${project.decorColor}`} />
                   <div className={`absolute top-4 -right-2 w-14 h-14 rounded-full ${project.decorColor}`} />
                   <div className={`absolute -bottom-4 left-10 w-20 h-20 rounded-full ${project.decorColor}`} />
 
-                  {/* Project number */}
                   <span className="absolute top-4 left-5 text-white/70 font-black text-5xl leading-none select-none drop-shadow-sm">
                     {String(i + 1).padStart(2, "0")}
                   </span>
 
-                  {/* Title */}
                   <h3 className="relative text-white font-bold text-xl leading-tight drop-shadow-sm z-10">
                     {title}
                   </h3>
 
-                  {/* Coming soon badge */}
                   {isComingSoon && (
                     <span className="absolute top-4 right-4 flex items-center gap-1 text-xs font-bold text-white bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-2.5 py-1 z-10">
                       <HiClock size={11} />
@@ -165,25 +165,21 @@ export default function Projects() {
 
                 {/* Card body */}
                 <div className="flex flex-col flex-1 p-5 gap-4">
-                  {/* Description */}
-                  <p className="text-sm text-slate-500 leading-relaxed flex-1">{description}</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed flex-1">{description}</p>
 
-                  {/* Tech chips */}
                   <div className="flex flex-wrap gap-1.5">
                     {project.techs.map((tech) => (
                       <span
                         key={tech}
-                        className={`text-xs font-semibold rounded-full px-2.5 py-1 ${project.tagColor}`}
+                        className={`text-xs font-semibold rounded-full px-2.5 py-1 ${project.tagColor} ${project.darkTagColor}`}
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
 
-                  {/* Divider */}
-                  <div className="border-t border-slate-100" />
+                  <div className="border-t border-slate-100 dark:border-slate-700" />
 
-                  {/* Buttons */}
                   <div className="flex flex-wrap gap-2">
                     {project.repos.map((repo) => (
                       <motion.a
@@ -193,7 +189,7 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.96 }}
-                        className="flex items-center gap-1.5 text-xs font-semibold text-white bg-slate-700 hover:bg-slate-600 rounded-lg px-3 py-2 transition-colors"
+                        className="flex items-center gap-1.5 text-xs font-semibold text-white bg-slate-700 hover:bg-slate-600 dark:bg-slate-600 dark:hover:bg-slate-500 rounded-lg px-3 py-2 transition-colors"
                       >
                         <FaGithub size={13} />
                         {lang === "es" ? repo.labelEs : repo.labelEn}

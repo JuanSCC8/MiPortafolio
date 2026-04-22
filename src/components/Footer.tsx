@@ -46,12 +46,12 @@ export default function Footer() {
         >
           <path
             d="M0,0 L1440,0 L1440,30 C1260,75 1080,10 900,45 C720,80 540,15 360,50 C180,85 60,20 0,55 Z"
-            fill="white"
+            className="fill-white dark:fill-slate-900"
           />
           <path
             d="M0,0 L1440,0 L1440,15 C1100,60 720,0 360,40 C180,60 60,10 0,30 Z"
-            fill="white"
             opacity="0.5"
+            className="fill-white dark:fill-slate-900"
           />
         </svg>
       </div>

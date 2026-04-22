@@ -47,7 +47,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-white py-24 px-6">
+    <section id="contact" className="bg-white dark:bg-slate-900 py-24 px-6">
       <div className="max-w-2xl mx-auto">
 
         {/* Header */}
@@ -58,30 +58,27 @@ export default function Contact() {
           <p className="text-blue-500 text-sm font-semibold tracking-widest uppercase mb-2">
             {contact.subtitle}
           </p>
-          <h2 className="text-4xl font-bold text-slate-800">{contact.title}</h2>
+          <h2 className="text-4xl font-bold text-slate-800 dark:text-slate-100">{contact.title}</h2>
           <div className="mt-4 mx-auto w-16 h-1 rounded-full bg-blue-500" />
         </motion.div>
 
         {/* Card */}
         <motion.div
           {...fadeUp(0.15)}
-          className="bg-white border border-slate-100 rounded-2xl shadow-md overflow-hidden"
+          className="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl shadow-md overflow-hidden"
         >
-          {/* Card top accent */}
           <div className="h-1.5 w-full bg-gradient-to-r from-blue-600 to-blue-400" />
 
           <div className="p-8">
-            {/* Email hint */}
-            <div className="flex items-center gap-2 text-sm text-slate-400 mb-8">
+            <div className="flex items-center gap-2 text-sm text-slate-400 dark:text-slate-500 mb-8">
               <HiMail size={16} className="text-blue-400" />
               juansebastianpc12@gmail.com
             </div>
 
             <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-5">
 
-              {/* Name */}
               <div className="flex flex-col gap-1.5">
-                <label className="text-sm font-semibold text-slate-600">
+                <label className="text-sm font-semibold text-slate-600 dark:text-slate-300">
                   {contact.name}
                 </label>
                 <input
@@ -91,13 +88,12 @@ export default function Contact() {
                   minLength={1}
                   maxLength={30}
                   placeholder={contact.namePlaceholder}
-                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 placeholder-slate-400 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition"
+                  className="w-full rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 px-4 py-3 text-sm text-slate-700 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900/30 transition"
                 />
               </div>
 
-              {/* Email */}
               <div className="flex flex-col gap-1.5">
-                <label className="text-sm font-semibold text-slate-600">
+                <label className="text-sm font-semibold text-slate-600 dark:text-slate-300">
                   {contact.email}
                 </label>
                 <input
@@ -107,13 +103,12 @@ export default function Contact() {
                   minLength={5}
                   maxLength={50}
                   placeholder={contact.emailPlaceholder}
-                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 placeholder-slate-400 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition"
+                  className="w-full rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 px-4 py-3 text-sm text-slate-700 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900/30 transition"
                 />
               </div>
 
-              {/* Message */}
               <div className="flex flex-col gap-1.5">
-                <label className="text-sm font-semibold text-slate-600">
+                <label className="text-sm font-semibold text-slate-600 dark:text-slate-300">
                   {contact.message}
                 </label>
                 <textarea
@@ -123,11 +118,10 @@ export default function Contact() {
                   minLength={10}
                   maxLength={150}
                   placeholder={contact.messagePlaceholder}
-                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 placeholder-slate-400 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition resize-none"
+                  className="w-full rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 px-4 py-3 text-sm text-slate-700 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900/30 transition resize-none"
                 />
               </div>
 
-              {/* Feedback */}
               {status === "success" && (
                 <motion.div
                   initial={{ opacity: 0, y: 8 }}
@@ -149,7 +143,6 @@ export default function Contact() {
                 </motion.div>
               )}
 
-              {/* Submit */}
               <motion.button
                 type="submit"
                 disabled={status === "sending"}
