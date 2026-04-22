@@ -21,9 +21,9 @@ const NAV_LINKS = [
 
 const TECHS = [
   { name: "Next.js",    icon: SiNextdotjs,   color: "#ffffff" },
-  { name: "React",      icon: FaReact,        color: "#61dafb" },
-  { name: "TypeScript", icon: SiTypescript,   color: "#3178c6" },
-  { name: "Tailwind",   icon: SiTailwindcss,  color: "#38bdf8" },
+  { name: "React",      icon: FaReact,        color: "#ffffff" },
+  { name: "TypeScript", icon: SiTypescript,   color: "#ffffff" },
+  { name: "Tailwind",   icon: SiTailwindcss,  color: "#ffffff" },
 ];
 
 export default function Footer() {
